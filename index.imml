@@ -1,0 +1,41 @@
+$title: Simple Coder's Lair
+$description: home of a simple coder, feel free to stay a while
+$style:
+    <style>
+    a.external:after {
+        content: "↗";
+    }
+    </style>
+[home]
+    # smplcd
+
+    Welcome to my little corner of the internet! I'm an inhabitant of **Earth**, currently residing in the Frozen Wastelands of North America. My quest is the **understading** of the universe through the mastery of **mathematics** and **computer science**; although I am terrible at both currently.
+
+    I have professional experience in back-end engineering with `.py`, `.docker`, `k8s`, `.sql`, and other back-end stuffs. But don't ask me about those, I don't want to remember.
+
+    Currently reading `kANDr2` to learn `.c`.
+
+    [posts]
+        &nbsp;
+        [inauguration]
+            ###### 205.2023
+            I have spent over 12 hours, trying to make a simple yet refined front end for a compedium of my projects, thoughts, and experiences to no avail. And that's when I serendipitously came across `imml`.
+
+            A no fuss `.md` to `.html` program with a live editor, almost perfect. Sadly there are 2 issues.
+            - it's written in the god awful language of `.js` because of the live editor;
+            - everything is contained within a single markdown file.
+            
+            For now this isn't an issue, but once more and more is written, it'll quickly get out of hands and difficult to manage. And I do aim for simplicity after all. There's also a few things I'd like to be different but this is neither here nor there.
+
+            As it stands currently, this is the most styling I'll be bringing to the website. I don't particularly enjoy 'coding' websites, and I have a general distaste for the web in its current incarnation.
+
+            If I don't forget that this exists, there should be updates at least monthly!
+    [neat links]
+        &nbsp;
+        [4get](https://4get.ca)
+        [codemadness](https://codemadness.org/)
+        [suckless](https://suckless.org/)
+        [xxiivv](https://wiki.xxiivv.com/site/stack.html)
+        [i330](https://i330.dev/)
+    ---
+    Made using [imml](https://github.com/leoncvlt/imml)
