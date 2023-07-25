@@ -32,10 +32,17 @@ $style:
             If I don't forget that this exists, there should be updates at least monthly!
     [neat links]
         &nbsp;
-        [4get](https://4get.ca)
-        [codemadness](https://codemadness.org/)
-        [suckless](https://suckless.org/)
-        [xxiivv](https://wiki.xxiivv.com/site/stack.html)
-        [i330](https://i330.dev/)
+
+        | Name                  | What                 
+        | --------------------- | ---------------------
+        | [4get](https://4get.ca) | metasearch engine
+        | [suckless](https://suckless.org/) | collective
+        | [xxiivv](https://wiki.xxiivv.com/site/stack.html) | wiki
+        | [i330](https://i330.dev/) | personal blog
+        | [codemadness](https://codemadness.org/) | personal blog
+		| [wr: xxiivv](https://webring.xxiivv.com/) | webring
+		| [grug](https://grugbrain.dev/) | guide
+        
     ---
     Made using [imml](https://github.com/leoncvlt/imml)
+
