@@ -15,6 +15,61 @@ $style:
 
     Currently reading `kANDr2` to learn `.c`.
 
+    [notes]
+        &nbsp;
+        [how NASA writes space-proof code]
+            ###### 206.2023
+            ### 1. Simple Control Flow
+            Don't use `goto`, `setjmp`, `longjmp`, `recursion`. Recursion creates hard to follow cyclic code control graphs
+            ### 2. Limit All Loops
+            Hard limit the number of iterations in all loops, otherwise it can lead to runaway code
+            ```git
+             int list search(list_t *e, int search) {
+            +    int i = 0;
+            +    while (e && i++ < MAX_ITER) {
+            -    while (e) {
+                     if (e->val == search)
+                         return e;
+                     e = e->fd;
+                 }
+                 return null;
+             }
+            ```
+            ### 3. Don't Use the Heap
+            Only use stack memory, never `malloc` or `free`. A memorable amount of the memory bugs come from using the heap. Memory use becomes deterministic.
+            ```c
+            typedef struct {
+                int in_use;
+                char data[DATA_SIZE];
+            } msg_t
+
+            void msg_task() {
+                msg_t msg_buf[NUM_MSG] = {0};
+                msg_process(msg_buf);
+                ...
+                return;
+            }
+            ```
+            ### 4. Limit Function Size
+            - Function should be no longer than 60 lines;
+            - Functions should do one thing;
+            - Easy to read and understand and to test.
+
+            ### 5. Practice Data Hiding
+            Declare variables in the lowest scope required.
+            ### 6. Check Return Values
+            Explicitly cast all ignored return values to a void type. It shows that you use the function in its intended purpose.
+            ### 7. Limit the Preprocessor
+            Limit the use of the C preprocessor to file inclusions and very simple conditional macros. Don't use too many conditional compilation otherwise the code becomes hard to scale and hard to test.
+
+            "The C preprocessor is a powerful obfuscation tool that can destroy code clarity and befuddle many text-based checkers."
+            ### 8. Restrict Pointers Use
+            Pointers should not be able to be dereferenced more than one layer at a time, since it's easy to use incorrectly. Also, don't use function pointers since they obfuscate the code control flow graph of the program.
+            ### 9. Be Pedantic
+            Compile with all warnings enabled and in pedantic mode `gcc -Wall -Werror -Wpedantic`, analyze the code with multiple static code analyzers with different rulesets, and unit test the code.
+
+            source: [Low Level Learner](https://yewtu.be/watch?v=GWYhtksrmhE)
+
     [posts]
         &nbsp;
         [inauguration]
@@ -45,4 +100,3 @@ $style:
         
     ---
     Made using [imml](https://github.com/leoncvlt/imml)
-
